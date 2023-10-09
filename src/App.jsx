@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import useBookSearch from "./useBookSearch";
-import FeatherIcons from " feather-icons-react";
+import FeatherIcons from "feather-icons-react";
 
 const App = () => {
   const [query, setQuery] = useState("Harry Potter");
