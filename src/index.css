@@ -1,13 +1,131 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a;
+  color: #fff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.text-center {
+  text-align: center;
+}
+.App {
+  padding: 20px 30px;
+}
+.searchBar {
+  position: relative;
+}
+.searchBar svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(50%);
+  color: #fff;
+}
+input {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  outline: none;
+  background-color: #444d56;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  transition: 0.3s;
+  color: #fff;
+}
+input::placeholder {
+  color: #ccc;
+  opacity: 0.4;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+input:focus::placeholder {
+  opacity: 0;
+}
+input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.book-item img {
+  width: 180px;
+  height: 260px;
+  object-fit: cover;
+}
+.book-item .book_title {
+  max-width: 150px;
+}
+.lazy_load_wrapper {
+  width: 180px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lazy_load_wrapper img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.messages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  width: 35px;
+  height: 35px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.scroll-up {
+  position: fixed;
+  right: 2rem;
+  bottom: 5rem;
+  transform: translateY(400px);
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #444d56;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-content: center;
+}
+.scroll-up:hover {
+  background-color: #0f172a;
+  transform: translateY(-10px);
+}
+.scrolled {
+  transform: translateY(0);
+}
+.copyright {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ccc;
 }
